@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>愿笺 · 致岁念</title>
+<meta name="description" content="十二个祝愿，四封短笺，一本祝福特刊。写给岁念：祝你学习进步，祝你幸福而自在。">
+<meta property="og:title" content="愿笺 · 致岁念">
+<meta property="og:description" content="十二个祝愿，四封短笺，一本特刊。都给你。">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f5f0e5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23a8463a'/%3E%3Ctext x='32' y='44' font-family='KaiTi,serif' font-size='36' fill='%23f8eedd' text-anchor='middle'%3E%E6%84%BF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#wishes">跳到正文</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#hero" aria-label="回到开头">
+    <span class="brand__seal" aria-hidden="true">愿</span>
+    <span class="brand__text">愿笺 · 致岁念</span>
+  </a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="index">
+    目录
+    <span class="menu-btn__lines" aria-hidden="true"></span>
+  </button>
+</header>
+
+<nav class="rail" id="rail" aria-label="章节导航">
+  <a href="#hero" data-nav="hero"><span class="rail__label">序</span><i></i></a>
+  <a href="#wishes" data-nav="wishes"><span class="rail__label">愿笺</span><i></i></a>
+  <a href="#notes" data-nav="notes"><span class="rail__label">短笺</span><i></i></a>
+  <a href="#journal" data-nav="journal"><span class="rail__label">校刊</span><i></i></a>
+  <a href="#blessing" data-nav="blessing"><span class="rail__label">祝词</span><i></i></a>
+  <a href="#lots" data-nav="lots"><span class="rail__label">抽签</span><i></i></a>
+  <a href="#end" data-nav="end"><span class="rail__label">落款</span><i></i></a>
+</nav>
+
+<div class="index" id="index" role="dialog" aria-modal="true" aria-label="目录" aria-hidden="true">
+  <button class="index__close" id="indexClose" type="button">关 闭</button>
+  <div class="index__inner">
+    <p class="index__kicker">目 录</p>
+    <ol>
+      <li><a href="#wishes"><span>01</span><strong>愿笺</strong><em>十二张</em></a></li>
+      <li><a href="#notes"><span>02</span><strong>短笺</strong><em>四封</em></a></li>
+      <li><a href="#journal"><span>03</span><strong>校刊</strong><em>祝福特刊</em></a></li>
+      <li><a href="#blessing"><span>04</span><strong>祝词</strong><em>见字如晤</em></a></li>
+      <li><a href="#lots"><span>05</span><strong>抽签</strong><em>今日签</em></a></li>
+      <li><a href="#end"><span>06</span><strong>落款</strong><em>祝你自在</em></a></li>
+    </ol>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ 首屏 ============ -->
+  <section class="hero" id="hero" data-section>
+    <div class="hero__bg" id="heroBg" aria-hidden="true"></div>
+    <div class="hero__moon" aria-hidden="true"></div>
+    <div class="hero__motes" id="motes" aria-hidden="true"></div>
+
+    <svg class="hero__mountains" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,300 C120,268 240,300 360,272 C480,244 600,292 720,268 C840,244 960,296 1080,264 C1200,232 1320,286 1440,258 L1440,420 L0,420 Z" fill="#3f5d56" opacity=".05"/>
+      <path d="M0,340 C160,310 280,352 440,330 C600,308 720,356 880,332 C1040,308 1200,354 1440,318 L1440,420 L0,420 Z" fill="#3f5d56" opacity=".065"/>
+      <path d="M0,382 C180,362 320,394 500,376 C680,358 820,396 1000,380 C1180,364 1300,394 1440,374 L1440,420 L0,420 Z" fill="#3f5d56" opacity=".075"/>
+    </svg>
+
+    <p class="hero__side hero__side--l" aria-hidden="true">岁 岁 常 欢</p>
+    <p class="hero__side hero__side--r" aria-hidden="true">万 事 胜 意</p>
+
+    <div class="hero__inner">
+      <p class="hero__kicker">一 纸 祝 愿</p>
+      <h1 class="hero__title" id="heroTitle">岁念安好</h1>
+      <div class="hero__rule" aria-hidden="true"></div>
+      <p class="hero__sub">十二个祝愿，四封短笺，一本特刊。都给你。</p>
+      <p class="hero__meta">冬 · 岁 末</p>
+    </div>
+
+    <a class="hero__scroll" href="#wishes">
+      <i aria-hidden="true"></i>
+      <span>启 封</span>
+    </a>
+  </section>
+
+  <!-- ============ 01 愿笺 ============ -->
+  <section class="chapter" id="wishes" data-section>
+    <div class="chapter__inner">
+      <span class="chapter__side" aria-hidden="true">01 / WISHES</span>
+      <header class="chapter__head reveal">
+        <span class="chapter__no">01</span>
+        <h2 class="chapter__title">愿笺</h2>
+        <span class="chapter__en">Wishes</span>
+      </header>
+
+      <div class="prose reveal">
+        <p class="lead">十二张愿笺，都给你。</p>
+        <p>每一张背面，藏着一句话。点开一张，收下一句；十二张都翻开，就是完整的祝福。</p>
+      </div>
+
+      <div class="wish-grid reveal" id="wishGrid">
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：学业。愿你笔下有光，卷上有分。" data-index="0" style="--i:0">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">01</span>
+              <span class="wishcard__theme">学业</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">学业</span>
+              <span class="wishcard__text">愿你笔下有光，卷上有分。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：睡眠。愿你夜里好眠，醒来有精神。" data-index="1" style="--i:1">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">02</span>
+              <span class="wishcard__theme">睡眠</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">睡眠</span>
+              <span class="wishcard__text">愿你夜里好眠，醒来有精神。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：文字。愿你想写的句子，都在纸上等你。" data-index="2" style="--i:2">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">03</span>
+              <span class="wishcard__theme">文字</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">文字</span>
+              <span class="wishcard__text">愿你想写的句子，都在纸上等你。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：日常。愿黑米粥甜一点，日子也甜一点。" data-index="3" style="--i:3">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">04</span>
+              <span class="wishcard__theme">日常</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">日常</span>
+              <span class="wishcard__text">愿黑米粥甜一点，日子也甜一点。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：勇气。愿你遇事不慌，心里有底。" data-index="4" style="--i:4">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">05</span>
+              <span class="wishcard__theme">勇气</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">勇气</span>
+              <span class="wishcard__text">愿你遇事不慌，心里有底。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：欢喜。愿你有小事可乐，不必等大喜。" data-index="5" style="--i:5">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">06</span>
+              <span class="wishcard__theme">欢喜</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">欢喜</span>
+              <span class="wishcard__text">愿你有小事可乐，不必等大喜。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：自在。愿你不必讨好谁，也被人善待。" data-index="6" style="--i:6">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">07</span>
+              <span class="wishcard__theme">自在</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">自在</span>
+              <span class="wishcard__text">愿你不必讨好谁，也被人善待。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：远方。愿你想去的城市，分数线刚刚好。" data-index="7" style="--i:7">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">08</span>
+              <span class="wishcard__theme">远方</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">远方</span>
+              <span class="wishcard__text">愿你想去的城市，分数线刚刚好。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：朋友。愿你在人群里，总有一两个说得上话的人。" data-index="8" style="--i:8">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">09</span>
+              <span class="wishcard__theme">朋友</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">朋友</span>
+              <span class="wishcard__text">愿你在人群里，总有一两个说得上话的人。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：健康。愿你少熬一点夜，多晒一点太阳。" data-index="9" style="--i:9">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">10</span>
+              <span class="wishcard__theme">健康</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">健康</span>
+              <span class="wishcard__text">愿你少熬一点夜，多晒一点太阳。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：运气。愿你的努力被看见，心愿有回响。" data-index="10" style="--i:10">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">11</span>
+              <span class="wishcard__theme">运气</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">运气</span>
+              <span class="wishcard__text">愿你的努力被看见，心愿有回响。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="wishcard" type="button" aria-pressed="false" aria-label="愿笺：自由。愿你心里有风，脚下有路。" data-index="11" style="--i:11">
+          <span class="wishcard__inner">
+            <span class="wishcard__face wishcard__front" aria-hidden="true">
+              <span class="wishcard__no">12</span>
+              <span class="wishcard__theme">自由</span>
+              <span class="wishcard__mark">愿</span>
+            </span>
+            <span class="wishcard__face wishcard__back" aria-hidden="true">
+              <span class="wishcard__backTheme">自由</span>
+              <span class="wishcard__text">愿你心里有风，脚下有路。</span>
+              <span class="wishcard__seal">愿</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+      <div class="wish-meta reveal" style="--delay:.1s">
+        <span class="wish-count" id="wishCount">已翻开 0 / 12</span>
+        <span class="wish-dots" id="wishDots" aria-hidden="true"></span>
+        <div class="wish-actions">
+          <button class="wish-btn" id="flipAll" type="button">全部翻开</button>
+          <button class="wish-btn" id="flipReset" type="button" disabled>重新合上</button>
+        </div>
+      </div>
+      <p class="wish-done" id="wishDone">十二愿，都给你。愿它们都应验。</p>
+    </div>
+  </section>
+
+  <!-- ============ 02 短笺 ============ -->
+  <section class="chapter" id="notes" data-section>
+    <div class="chapter__inner">
+      <span class="chapter__side" aria-hidden="true">02 / NOTES</span>
+      <header class="chapter__head reveal">
+        <span class="chapter__no">02</span>
+        <h2 class="chapter__title">短笺</h2>
+        <span class="chapter__en">Notes</span>
+      </header>
+
+      <div class="prose reveal">
+        <p class="lead">四封短笺，写给你的四件小事。</p>
+        <p>不必一次读完。拆一封，收一句；拆完，再合上。</p>
+      </div>
+
+      <p class="letters__hint reveal">—— 拆开一封，取一句祝福。</p>
+
+      <div class="envelopes">
+        <article class="env reveal" data-env>
+          <div class="env__body">
+            <div class="env__letter" id="env-letter-1">
+              <span class="env__letterDate">一愿</span>
+              <p>愿你笔下有光，卷上有分。不会的题刚好会做，会做的题都不粗心。</p>
+              <span class="env__letterSign">学业</span>
+            </div>
+          </div>
+          <div class="env__flap" aria-hidden="true"><span class="env__wax">愿</span></div>
+          <div class="env__front" aria-hidden="true"><span class="env__date">学业</span><span class="env__hint">拆 信</span></div>
+          <button class="env__hit" type="button" aria-expanded="false" aria-controls="env-letter-1"><span class="sr-only">展开学业的短笺</span></button>
+        </article>
+
+        <article class="env reveal" data-env style="--delay:.08s">
+          <div class="env__body">
+            <div class="env__letter" id="env-letter-2">
+              <span class="env__letterDate">二愿</span>
+              <p>愿你夜里睡得沉，醒来有精神。少熬一点夜，多晒一点太阳。</p>
+              <span class="env__letterSign">夜晚</span>
+            </div>
+          </div>
+          <div class="env__flap" aria-hidden="true"><span class="env__wax">愿</span></div>
+          <div class="env__front" aria-hidden="true"><span class="env__date">夜晚</span><span class="env__hint">拆 信</span></div>
+          <button class="env__hit" type="button" aria-expanded="false" aria-controls="env-letter-2"><span class="sr-only">展开夜晚的短笺</span></button>
+        </article>
+
+        <article class="env reveal" data-env style="--delay:.16s">
+          <div class="env__body">
+            <div class="env__letter" id="env-letter-3">
+              <span class="env__letterDate">三愿</span>
+              <p>愿你想写的句子，都在纸上等你。改版面的时候，一次就过。</p>
+              <span class="env__letterSign">文字</span>
+            </div>
+          </div>
+          <div class="env__flap" aria-hidden="true"><span class="env__wax">愿</span></div>
+          <div class="env__front" aria-hidden="true"><span class="env__date">文字</span><span class="env__hint">拆 信</span></div>
+          <button class="env__hit" type="button" aria-expanded="false" aria-controls="env-letter-3"><span class="sr-only">展开文字的短笺</span></button>
+        </article>
+
+        <article class="env reveal" data-env style="--delay:.24s">
+          <div class="env__body">
+            <div class="env__letter" id="env-letter-4">
+              <span class="env__letterDate">四愿</span>
+              <p>愿你想去的城市，分数线刚刚好。想做的事，都有时间去做。</p>
+              <span class="env__letterSign">明天</span>
+            </div>
+          </div>
+          <div class="env__flap" aria-hidden="true"><span class="env__wax">愿</span></div>
+          <div class="env__front" aria-hidden="true"><span class="env__date">明天</span><span class="env__hint">拆 信</span></div>
+          <button class="env__hit" type="button" aria-expanded="false" aria-controls="env-letter-4"><span class="sr-only">展开明天的短笺</span></button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 校刊 ============ -->
+  <section class="chapter" id="journal" data-section>
+    <div class="chapter__inner">
+      <span class="chapter__side" aria-hidden="true">03 / JOURNAL</span>
+      <header class="chapter__head reveal">
+        <span class="chapter__no">03</span>
+        <h2 class="chapter__title">校刊</h2>
+        <span class="chapter__en">Journal</span>
+      </header>
+
+      <div class="prose reveal">
+        <p class="lead">一本只登祝福的特刊。</p>
+        <p>封面、卷首、散文、诗、编后。五页，慢慢翻。</p>
+      </div>
+
+      <p class="journal__hint reveal">—— 翻开一页。</p>
+
+      <div class="journal reveal" id="journalBox">
+        <div class="journal__stage" id="journalStage" tabindex="0" role="group" aria-label="祝福特刊，共五页，点击翻页">
+          <article class="jpage jpage--cover" aria-hidden="false">
+            <span class="jpage__coverKicker">祝福特刊 · 文学社编辑部</span>
+            <div class="jpage__coverTitle">校刊</div>
+            <span class="jpage__coverMeta">二〇二五 — 二〇二六</span>
+            <span class="jpage__seal" aria-hidden="true">阅</span>
+          </article>
+
+          <article class="jpage" aria-hidden="true">
+            <span class="jpage__mark" aria-hidden="true">文</span>
+            <span class="jpage__kicker">校刊 · 卷首</span>
+            <h3 class="jpage__title">写在前面</h3>
+            <div class="jpage__body">
+              <p>这一期不登新闻，不登评论，只登一件小事：祝岁念，一切都好。</p>
+              <p>愿这五页纸，能替冬天说几句暖话。</p>
+              <p class="jpage__sign">—— 编辑部</p>
+            </div>
+            <div class="jpage__foot"><span>文学社</span><span>02 / 05</span></div>
+          </article>
+
+          <article class="jpage" aria-hidden="true">
+            <span class="jpage__mark" aria-hidden="true">文</span>
+            <span class="jpage__kicker">校刊 · 散文</span>
+            <h3 class="jpage__title">冬天很长</h3>
+            <div class="jpage__body">
+              <p>冬天很长，但春天总会来。愿你在等春天的日子里，有热汤，有暖灯，有一本想读的书，有一个可以说话的人。</p>
+              <p>也愿你，成为自己的春天。</p>
+            </div>
+            <div class="jpage__foot"><span>文学社</span><span>03 / 05</span></div>
+          </article>
+
+          <article class="jpage" aria-hidden="true">
+            <span class="jpage__mark" aria-hidden="true">文</span>
+            <span class="jpage__kicker">校刊 · 诗</span>
+            <h3 class="jpage__title">愿</h3>
+            <div class="jpage__body">
+              <p class="jpage__poem">愿你有一扇朝南的窗，<br>有一盏不灭的灯，<br>有一两个说得上话的人，<br>有一件想起来就笑的事。</p>
+            </div>
+            <div class="jpage__foot"><span>文学社</span><span>04 / 05</span></div>
+          </article>
+
+          <article class="jpage" aria-hidden="true">
+            <span class="jpage__mark" aria-hidden="true">文</span>
+            <span class="jpage__kicker">校刊 · 编后</span>
+            <h3 class="jpage__title">编后</h3>
+            <div class="jpage__body">
+              <p>本期编辑：所有想祝你顺利的人。</p>
+              <p>校对：冬天。　发行：风。</p>
+              <p class="jpage__sign">下一期，等你来写。</p>
+            </div>
+            <div class="jpage__foot"><span>文学社</span><span>05 / 05</span></div>
+          </article>
+        </div>
+
+        <div class="journal__ctrl">
+          <button class="jbtn" id="jPrev" type="button" aria-label="上一页">‹ 上一页</button>
+          <span class="jcount" id="jCount" aria-live="polite">01 / 05</span>
+          <button class="jbtn" id="jNext" type="button" aria-label="下一页">下一页 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 祝词 ============ -->
+  <section class="chapter" id="blessing" data-section>
+    <div class="chapter__inner">
+      <span class="chapter__side" aria-hidden="true">04 / BLESSING</span>
+      <header class="chapter__head reveal">
+        <span class="chapter__no">04</span>
+        <h2 class="chapter__title">祝词</h2>
+        <span class="chapter__en">Blessing</span>
+      </header>
+
+      <div class="prose reveal">
+        <p class="lead">写给你的祝词。</p>
+        <p>不长，但每一句都算数。</p>
+      </div>
+
+      <article class="letter reveal" aria-label="写给岁念的祝词">
+        <div class="letter__meta">
+          <span>致 岁 念</span>
+          <span>冬 月</span>
+        </div>
+
+        <div class="letter__body">
+          <p class="letter__salut">岁念：</p>
+          <p>见字如晤。</p>
+
+          <p>冬天到了。窗外的风一日冷过一日，想写几句话给你。</p>
+
+          <p>愿你读书时心是静的，考试时手是稳的。不会的题刚好会做，会做的题都不粗心。</p>
+
+          <p>愿你夜里睡得沉，醒来有精神；愿你在喜欢的课上，被点到会答的那一题；愿你的作文本上，多几个让自己满意的句子。</p>
+
+          <p>愿你在文学社的灯下，改出满意的版面；愿你的名字，出现在更多你想出现的地方。</p>
+
+          <p>愿你想去的城市，分数线刚刚好；愿你想做的事，都有时间去做。</p>
+
+          <p>这些话很轻，但都是真的。</p>
+
+          <p>祝你学习进步，诸事顺遂。</p>
+
+          <p class="letter__wish">祝你幸福而自在。</p>
+
+          <p class="letter__name">李裕瀚<br><span>冬 月</span></p>
+
+          <p class="letter__ps"><span class="letter__psTag">P.S.</span> 十二张愿笺，别忘了翻开。</p>
+        </div>
+
+        <div class="letter__tools">
+          <button class="printBtn" id="printBtn" type="button">存下这封祝词</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 05 抽签 ============ -->
+  <section class="chapter" id="lots" data-section>
+    <div class="chapter__inner">
+      <span class="chapter__side" aria-hidden="true">05 / LOTS</span>
+      <header class="chapter__head reveal">
+        <span class="chapter__no">05</span>
+        <h2 class="chapter__title">抽签</h2>
+        <span class="chapter__en">Lots</span>
+      </header>
+
+      <div class="prose reveal">
+        <p class="lead">今日的签，抽一支。</p>
+        <p>签筒里有十二支签。抽到哪一句，哪一句就算数。</p>
+      </div>
+
+      <div class="draw reveal">
+        <div class="draw__stage">
+          <div class="tube" id="tube" aria-hidden="true">
+            <div class="tube__body"></div>
+            <div class="tube__slips"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="tube__rim"></div>
+            <div class="tube__mouth"></div>
+            <div class="tube__label">岁念</div>
+          </div>
+
+          <div class="slip" id="slip" aria-hidden="true">
+            <div class="slip__paper">
+              <span class="slip__text" id="slipText"></span>
+            </div>
+            <span class="slip__seal">愿</span>
+          </div>
+        </div>
+
+        <button class="draw__btn" id="drawBtn" type="button">抽 一 支</button>
+
+        <div class="draw__meta">
+          <div class="draw__dots" id="drawDots" aria-hidden="true"></div>
+          <span class="draw__count" id="drawCount">共十二支 · 已抽 0</span>
+        </div>
+        <p class="draw__done" id="drawDone">十二支，都抽完了。愿它们都应验。</p>
+        <p class="sr-only" id="drawLive" role="status" aria-live="polite"></p>
+
+        <noscript><p class="draw__done is-visible">抽签需要开启 JavaScript。那些祝愿，也都写在祝词里了。</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 落款 ============ -->
+  <section class="end" id="end" data-section>
+    <div class="end__bg" aria-hidden="true"></div>
+    <canvas class="end__snow" id="snow" aria-hidden="true"></canvas>
+
+    <svg class="end__constellation" viewBox="0 0 200 170" aria-hidden="true">
+      <g stroke="#3f5d56" stroke-width=".7" opacity=".6" fill="none">
+        <path d="M26 96 L58 70 L92 82 L114 52 L148 62 L162 32 L184 44"/>
+        <path d="M92 82 L86 112"/>
+      </g>
+      <g fill="#3f5d56">
+        <circle cx="26" cy="96" r="1.7"/><circle cx="58" cy="70" r="2.3"/>
+        <circle cx="92" cy="82" r="1.5"/><circle cx="114" cy="52" r="2"/>
+        <circle cx="148" cy="62" r="1.6"/><circle cx="162" cy="32" r="2.2"/>
+        <circle cx="184" cy="44" r="1.5"/><circle cx="86" cy="112" r="1.2"/>
+      </g>
+      <text x="146" y="142" font-family="KaiTi, serif" font-size="7" letter-spacing="3.5" fill="#3f5d56">岁念</text>
+    </svg>
+
+    <div class="end__inner">
+      <p class="end__kicker">06 · 落 款</p>
+      <p class="end__note">祝愿写到这里，就该收笔了。<br>往后的路，慢慢走。</p>
+
+      <h2 class="end__bless" id="endBless">祝你幸福而自在</h2>
+
+      <div class="end__stamp">
+        <p class="end__hint" id="sealHint">轻 轻 按 下</p>
+
+        <button class="sealBtn" id="sealBtn" type="button" aria-pressed="false" aria-label="按下印章，完成落款">
+          <span class="sealBtn__box" aria-hidden="true"></span>
+          <span class="sealBtn__ring" aria-hidden="true"></span>
+          <span class="sealBtn__seal">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs>
+                <filter id="rough" x="-25%" y="-25%" width="150%" height="150%">
+                  <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="4" seed="9" result="noise"/>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+                </filter>
+                <radialGradient id="sealInk" cx="32%" cy="24%" r="82%">
+                  <stop offset="0" stop-color="#c26456"/>
+                  <stop offset=".55" stop-color="#a8463a"/>
+                  <stop offset="1" stop-color="#86312a"/>
+                </radialGradient>
+              </defs>
+              <g filter="url(#rough)">
+                <rect x="5" y="5" width="110" height="110" rx="4" fill="url(#sealInk)"/>
+                <rect x="11" y="11" width="98" height="98" rx="2" fill="none" stroke="#f8eedd" stroke-width="2" opacity=".5"/>
+                <text x="60" y="48" text-anchor="middle" font-family="KaiTi,STKaiti,serif" font-size="31" fill="#f8eedd">岁</text>
+                <text x="60" y="83" text-anchor="middle" font-family="KaiTi,STKaiti,serif" font-size="31" fill="#f8eedd">念</text>
+              </g>
+            </svg>
+          </span>
+        </button>
+
+        <div class="end__sign" aria-live="polite">
+          <span class="end__name">李裕瀚</span>
+          <span class="end__dot" aria-hidden="true"></span>
+          <span class="end__date">冬 月</span>
+        </div>
+      </div>
+
+      <div class="end__foot">
+        <span>二〇二五 — 二〇二六 · 冬</span>
+        <a class="end__back" href="#hero">回到开头 ↑</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>愿笺 · 致岁念</span>
+    <span class="footer__note">有些话，还是写在纸上比较好。</span>
+    <span>二〇二五 — 二〇二六</span>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
