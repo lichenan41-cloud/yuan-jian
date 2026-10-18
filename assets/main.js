@@ -609,6 +609,97 @@
     });
   })();
 
+  /* ---------- 分享 ---------- */
+  (function shareSite() {
+    var btn = $('#shareBtn');
+    if (!btn) return;
+    var toast = $('#toast');
+    var guide = $('#shareGuide');
+    var guideClose = $('#shareGuideClose');
+    var siteUrl = 'https://yuan-jian.netlify.app/';
+    var title = '愿笺 · 致岁念';
+    var text = '十二个祝愿，四封短笺，一本特刊。都给你。';
+    var toastTimer = null;
+    var lastFocus = null;
+
+    function isWeChat() {
+      return /MicroMessenger/i.test(navigator.userAgent || '');
+    }
+
+    function showToast(msg) {
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 2800);
+    }
+
+    function fallbackCopy(done) {
+      var ta = document.createElement('textarea');
+      ta.value = siteUrl;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+
+    function copyLink() {
+      var done = function () { showToast('链接已复制，打开微信粘贴发送'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(siteUrl).then(done).catch(function () { fallbackCopy(done); });
+      } else {
+        fallbackCopy(done);
+      }
+    }
+
+    function openGuide() {
+      if (!guide) return;
+      lastFocus = document.activeElement;
+      guide.classList.add('is-open');
+      guide.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('is-locked');
+      if (guideClose) guideClose.focus();
+    }
+
+    function closeGuide() {
+      if (!guide) return;
+      guide.classList.remove('is-open');
+      guide.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('is-locked');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    btn.addEventListener('click', function () {
+      if (isWeChat()) { openGuide(); return; }
+      if (navigator.share) {
+        try {
+          navigator.share({ title: title, text: text, url: siteUrl }).catch(function (err) {
+            if (err && err.name === 'AbortError') return;
+            copyLink();
+          });
+        } catch (e) {
+          copyLink();
+        }
+        return;
+      }
+      copyLink();
+    });
+
+    if (guideClose) guideClose.addEventListener('click', closeGuide);
+    if (guide) {
+      guide.addEventListener('click', function (e) {
+        if (e.target === guide) closeGuide();
+      });
+      guide.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeGuide();
+      });
+    }
+  })();
+
   /* ---------- 12. 打印这封信 ---------- */
   (function printLetter() {
     var btn = $('#printBtn');
