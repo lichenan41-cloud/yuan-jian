@@ -41,10 +41,13 @@
     <span class="brand__seal" aria-hidden="true">愿</span>
     <span class="brand__text">愿笺 · 致岁念</span>
   </a>
-  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="index">
-    目录
-    <span class="menu-btn__lines" aria-hidden="true"></span>
-  </button>
+  <div class="topbar__actions">
+    <button class="share-btn" id="shareBtn" type="button" aria-label="分享这个网站">分享</button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="index">
+      目录
+      <span class="menu-btn__lines" aria-hidden="true"></span>
+    </button>
+  </div>
 </header>
 
 <nav class="rail" id="rail" aria-label="章节导航">
@@ -643,6 +646,17 @@
     <span>二〇二五 — 二〇二六</span>
   </div>
 </footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="share-guide" id="shareGuide" role="dialog" aria-modal="true" aria-label="分享提示" aria-hidden="true">
+  <div class="share-guide__arrow" aria-hidden="true">↗</div>
+  <div class="share-guide__card">
+    <p class="share-guide__title">点右上角的 <strong>···</strong></p>
+    <p class="share-guide__text">选择「分享给朋友」，这样发出去才有封面卡片。</p>
+    <button class="share-guide__close" id="shareGuideClose" type="button">知道了</button>
+  </div>
+</div>
 
 <script src="assets/main.js"></script>
 </body>
