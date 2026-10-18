@@ -626,6 +626,10 @@
       return /MicroMessenger/i.test(navigator.userAgent || '');
     }
 
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || '');
+    }
+
     function showToast(msg) {
       if (!toast) return;
       toast.textContent = msg;
@@ -675,7 +679,7 @@
 
     btn.addEventListener('click', function () {
       if (isWeChat()) { openGuide(); return; }
-      if (navigator.share) {
+      if (isMobile() && navigator.share) {
         try {
           navigator.share({ title: title, text: text, url: siteUrl }).catch(function (err) {
             if (err && err.name === 'AbortError') return;
