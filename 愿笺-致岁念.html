@@ -8,6 +8,22 @@
 <meta property="og:title" content="愿笺 · 致岁念">
 <meta property="og:description" content="十二个祝愿，四封短笺，一本特刊。都给你。">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://yuan-jian.netlify.app/">
+<meta property="og:url" content="https://yuan-jian.netlify.app/">
+<meta property="og:site_name" content="愿笺 · 致岁念">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuan-jian.netlify.app/assets/og-cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="愿笺 · 致岁念：祝你幸福而自在">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="愿笺 · 致岁念">
+<meta name="twitter:description" content="十二个祝愿，四封短笺，一本祝福特刊。都给你。">
+<meta name="twitter:image" content="https://yuan-jian.netlify.app/assets/og-cover.jpg">
+<link rel="image_src" href="https://yuan-jian.netlify.app/assets/og-cover.jpg">
+<meta name="thumbnail" content="https://yuan-jian.netlify.app/assets/og-cover.jpg">
+<meta itemprop="image" content="https://yuan-jian.netlify.app/assets/og-cover.jpg">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#f5f0e5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23a8463a'/%3E%3Ctext x='32' y='44' font-family='KaiTi,serif' font-size='36' fill='%23f8eedd' text-anchor='middle'%3E%E6%84%BF%3C/text%3E%3C/svg%3E">
@@ -211,6 +227,23 @@ button{font:inherit;color:inherit}
   background:currentColor;
 }
 .menu-btn:hover{color:var(--cinnabar)}
+
+.topbar__actions{display:flex;align-items:center;gap:18px}
+.share-btn{
+  appearance:none;
+  padding:7px 2px;
+  border:0;
+  background:none;
+  cursor:pointer;
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:.3em;
+  text-indent:.3em;
+  color:var(--ink-soft);
+  transition:color .3s var(--ease);
+}
+.share-btn:hover{color:var(--cinnabar)}
+
 
 /* ---------- 右侧章节导航 ---------- */
 .rail{
@@ -1527,6 +1560,100 @@ button{font:inherit;color:inherit}
   to{opacity:1;transform:none}
 }
 
+
+/* ---------- 分享 ---------- */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:34px;
+  z-index:93;
+  max-width:calc(100% - 40px);
+  padding:10px 18px;
+  border-radius:2px;
+  background:rgba(38,48,45,.93);
+  color:#f6f1e6;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.1em;
+  line-height:1.7;
+  text-align:center;
+  transform:translate(-50%,12px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .35s var(--ease),transform .35s var(--ease),visibility .35s;
+}
+.toast.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+.share-guide{
+  position:fixed;
+  inset:0;
+  z-index:92;
+  background:rgba(18,24,22,.48);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .3s var(--ease),visibility .3s;
+}
+.share-guide.is-open{opacity:1;visibility:visible}
+.share-guide__arrow{
+  position:absolute;
+  top:26px;
+  right:30px;
+  color:#fbf6ea;
+  font-family:var(--latin);
+  font-size:46px;
+  line-height:1;
+  text-shadow:0 2px 18px rgba(0,0,0,.35);
+  animation:guidePulse 1.8s ease-in-out infinite;
+}
+@keyframes guidePulse{
+  0%,100%{transform:translateY(0);opacity:.65}
+  50%{transform:translateY(-7px);opacity:1}
+}
+.share-guide__card{
+  position:absolute;
+  left:50%;
+  bottom:64px;
+  transform:translateX(-50%);
+  width:min(86%,330px);
+  padding:24px 24px 20px;
+  border:1px solid rgba(120,100,70,.3);
+  background:linear-gradient(165deg,#fdf8ec,#f4ead7);
+  box-shadow:0 30px 60px -40px rgba(0,0,0,.6);
+  text-align:center;
+}
+.share-guide__title{
+  margin:0;
+  font-family:var(--kai);
+  font-size:21px;
+  letter-spacing:.08em;
+  color:var(--ink);
+}
+.share-guide__title strong{font-weight:400;color:var(--cinnabar);letter-spacing:.12em}
+.share-guide__text{
+  margin:10px 0 18px;
+  font-family:var(--sans);
+  font-size:12px;
+  line-height:1.9;
+  letter-spacing:.04em;
+  color:var(--ink-soft);
+}
+.share-guide__close{
+  appearance:none;
+  padding:9px 24px;
+  border:1px solid rgba(168,70,58,.4);
+  border-radius:2px;
+  background:none;
+  color:var(--cinnabar);
+  font-family:var(--sans);
+  font-size:9.5px;
+  letter-spacing:.28em;
+  text-indent:.28em;
+  cursor:pointer;
+  transition:background .3s,color .3s;
+}
+.share-guide__close:hover{background:var(--cinnabar);color:#faf4e6}
+
 /* ---------- 落款 ---------- */
 .end{
   position:relative;
@@ -1945,7 +2072,7 @@ body.is-locked{overflow:hidden}
   @page{margin:18mm}
   body{background:#fff;color:#000}
   body::before,.grain,.topbar,.rail,.progress,.index,.hero,.end,.footer,
-  .chapter:not(#blessing),.letter__tools,.chapter__side{display:none!important}
+  .chapter:not(#blessing),.letter__tools,.chapter__side,.toast,.share-guide{display:none!important}
   .chapter{padding:0!important}
   .chapter__inner{width:100%;max-width:none}
   #blessing .chapter__head,#blessing .lead,#blessing .prose{display:none!important}
@@ -1974,10 +2101,13 @@ body.is-locked{overflow:hidden}
     <span class="brand__seal" aria-hidden="true">愿</span>
     <span class="brand__text">愿笺 · 致岁念</span>
   </a>
-  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="index">
-    目录
-    <span class="menu-btn__lines" aria-hidden="true"></span>
-  </button>
+  <div class="topbar__actions">
+    <button class="share-btn" id="shareBtn" type="button" aria-label="分享这个网站">分享</button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="index">
+      目录
+      <span class="menu-btn__lines" aria-hidden="true"></span>
+    </button>
+  </div>
 </header>
 
 <nav class="rail" id="rail" aria-label="章节导航">
@@ -2576,6 +2706,17 @@ body.is-locked{overflow:hidden}
     <span>二〇二五 — 二〇二六</span>
   </div>
 </footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="share-guide" id="shareGuide" role="dialog" aria-modal="true" aria-label="分享提示" aria-hidden="true">
+  <div class="share-guide__arrow" aria-hidden="true">↗</div>
+  <div class="share-guide__card">
+    <p class="share-guide__title">点右上角的 <strong>···</strong></p>
+    <p class="share-guide__text">选择「分享给朋友」，这样发出去才有封面卡片。</p>
+    <button class="share-guide__close" id="shareGuideClose" type="button">知道了</button>
+  </div>
+</div>
 
 <script>
 /* =========================================================
@@ -3187,6 +3328,97 @@ body.is-locked{overflow:hidden}
       if (document.hidden) stop();
       else if (section.getBoundingClientRect().top < window.innerHeight) start();
     });
+  })();
+
+  /* ---------- 分享 ---------- */
+  (function shareSite() {
+    var btn = $('#shareBtn');
+    if (!btn) return;
+    var toast = $('#toast');
+    var guide = $('#shareGuide');
+    var guideClose = $('#shareGuideClose');
+    var siteUrl = 'https://yuan-jian.netlify.app/';
+    var title = '愿笺 · 致岁念';
+    var text = '十二个祝愿，四封短笺，一本特刊。都给你。';
+    var toastTimer = null;
+    var lastFocus = null;
+
+    function isWeChat() {
+      return /MicroMessenger/i.test(navigator.userAgent || '');
+    }
+
+    function showToast(msg) {
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 2800);
+    }
+
+    function fallbackCopy(done) {
+      var ta = document.createElement('textarea');
+      ta.value = siteUrl;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+
+    function copyLink() {
+      var done = function () { showToast('链接已复制，打开微信粘贴发送'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(siteUrl).then(done).catch(function () { fallbackCopy(done); });
+      } else {
+        fallbackCopy(done);
+      }
+    }
+
+    function openGuide() {
+      if (!guide) return;
+      lastFocus = document.activeElement;
+      guide.classList.add('is-open');
+      guide.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('is-locked');
+      if (guideClose) guideClose.focus();
+    }
+
+    function closeGuide() {
+      if (!guide) return;
+      guide.classList.remove('is-open');
+      guide.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('is-locked');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    btn.addEventListener('click', function () {
+      if (isWeChat()) { openGuide(); return; }
+      if (navigator.share) {
+        try {
+          navigator.share({ title: title, text: text, url: siteUrl }).catch(function (err) {
+            if (err && err.name === 'AbortError') return;
+            copyLink();
+          });
+        } catch (e) {
+          copyLink();
+        }
+        return;
+      }
+      copyLink();
+    });
+
+    if (guideClose) guideClose.addEventListener('click', closeGuide);
+    if (guide) {
+      guide.addEventListener('click', function (e) {
+        if (e.target === guide) closeGuide();
+      });
+      guide.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeGuide();
+      });
+    }
   })();
 
   /* ---------- 12. 打印这封信 ---------- */
