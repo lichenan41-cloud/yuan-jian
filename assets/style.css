@@ -198,6 +198,23 @@ button{font:inherit;color:inherit}
 }
 .menu-btn:hover{color:var(--cinnabar)}
 
+.topbar__actions{display:flex;align-items:center;gap:18px}
+.share-btn{
+  appearance:none;
+  padding:7px 2px;
+  border:0;
+  background:none;
+  cursor:pointer;
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:.3em;
+  text-indent:.3em;
+  color:var(--ink-soft);
+  transition:color .3s var(--ease);
+}
+.share-btn:hover{color:var(--cinnabar)}
+
+
 /* ---------- 右侧章节导航 ---------- */
 .rail{
   position:fixed;
@@ -1513,6 +1530,100 @@ button{font:inherit;color:inherit}
   to{opacity:1;transform:none}
 }
 
+
+/* ---------- 分享 ---------- */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:34px;
+  z-index:93;
+  max-width:calc(100% - 40px);
+  padding:10px 18px;
+  border-radius:2px;
+  background:rgba(38,48,45,.93);
+  color:#f6f1e6;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.1em;
+  line-height:1.7;
+  text-align:center;
+  transform:translate(-50%,12px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .35s var(--ease),transform .35s var(--ease),visibility .35s;
+}
+.toast.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+.share-guide{
+  position:fixed;
+  inset:0;
+  z-index:92;
+  background:rgba(18,24,22,.48);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .3s var(--ease),visibility .3s;
+}
+.share-guide.is-open{opacity:1;visibility:visible}
+.share-guide__arrow{
+  position:absolute;
+  top:26px;
+  right:30px;
+  color:#fbf6ea;
+  font-family:var(--latin);
+  font-size:46px;
+  line-height:1;
+  text-shadow:0 2px 18px rgba(0,0,0,.35);
+  animation:guidePulse 1.8s ease-in-out infinite;
+}
+@keyframes guidePulse{
+  0%,100%{transform:translateY(0);opacity:.65}
+  50%{transform:translateY(-7px);opacity:1}
+}
+.share-guide__card{
+  position:absolute;
+  left:50%;
+  bottom:64px;
+  transform:translateX(-50%);
+  width:min(86%,330px);
+  padding:24px 24px 20px;
+  border:1px solid rgba(120,100,70,.3);
+  background:linear-gradient(165deg,#fdf8ec,#f4ead7);
+  box-shadow:0 30px 60px -40px rgba(0,0,0,.6);
+  text-align:center;
+}
+.share-guide__title{
+  margin:0;
+  font-family:var(--kai);
+  font-size:21px;
+  letter-spacing:.08em;
+  color:var(--ink);
+}
+.share-guide__title strong{font-weight:400;color:var(--cinnabar);letter-spacing:.12em}
+.share-guide__text{
+  margin:10px 0 18px;
+  font-family:var(--sans);
+  font-size:12px;
+  line-height:1.9;
+  letter-spacing:.04em;
+  color:var(--ink-soft);
+}
+.share-guide__close{
+  appearance:none;
+  padding:9px 24px;
+  border:1px solid rgba(168,70,58,.4);
+  border-radius:2px;
+  background:none;
+  color:var(--cinnabar);
+  font-family:var(--sans);
+  font-size:9.5px;
+  letter-spacing:.28em;
+  text-indent:.28em;
+  cursor:pointer;
+  transition:background .3s,color .3s;
+}
+.share-guide__close:hover{background:var(--cinnabar);color:#faf4e6}
+
 /* ---------- 落款 ---------- */
 .end{
   position:relative;
@@ -1931,7 +2042,7 @@ body.is-locked{overflow:hidden}
   @page{margin:18mm}
   body{background:#fff;color:#000}
   body::before,.grain,.topbar,.rail,.progress,.index,.hero,.end,.footer,
-  .chapter:not(#blessing),.letter__tools,.chapter__side{display:none!important}
+  .chapter:not(#blessing),.letter__tools,.chapter__side,.toast,.share-guide{display:none!important}
   .chapter{padding:0!important}
   .chapter__inner{width:100%;max-width:none}
   #blessing .chapter__head,#blessing .lead,#blessing .prose{display:none!important}
